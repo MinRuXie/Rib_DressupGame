@@ -1,0 +1,180 @@
+@charset "UTF-8";
+* {
+  -webkit-font-smoothing: antialiased;
+  font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+
+.room-part .room-box {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.room-part .room-box .mobile-munu-btn {
+  display: none;
+}
+.room-part .room-box .bg {
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.room-part .room-box .bg img {
+  height: 100%;
+}
+.room-part .room-box .person {
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.room-part .room-box .person img {
+  height: 100%;
+}
+.room-part .room-box .clothes {
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.room-part .room-box .clothes img {
+  height: 100%;
+}
+.room-part .wardrobe-box {
+  width: 100%;
+  height: 100vh;
+}
+.room-part .wardrobe-box .title {
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.room-part .wardrobe-box .content .content-item {
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.room-part .wardrobe-box .content .content-item:hover {
+  opacity: 0.6;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.room-part .wardrobe-box .suit-box .content .content-item {
+  width: 50px;
+}
+.room-part .wardrobe-box .suit-box .content .content-item img {
+  width: 100%;
+}
+.room-part .wardrobe-box .clothes-box .content .content-item {
+  width: 50px;
+  height: 50px;
+}
+.room-part .wardrobe-box .clothes-box .content .content-item img {
+  height: 100%;
+}
+.room-part .wardrobe-box .bg-box .content .content-item {
+  width: 50px;
+  height: 50px;
+}
+.room-part .wardrobe-box .bg-box .content .content-item img {
+  height: 100%;
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFF;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
+.loading .loading-img-box {
+  width: 100px;
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.loading .loading-img-box img {
+  width: 100%;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(0);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+/* 平板 */
+@media (max-width: 768px) {
+  .room-part .room-box .mobile-munu-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 4;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+  }
+  .room-part .room-box .mobile-munu-btn::before {
+    content: "≡";
+    font-size: 20px;
+    color: goldenrod;
+  }
+  .room-part .room-box .bg {
+    width: 100%;
+    height: auto;
+  }
+  .room-part .room-box .bg img {
+    width: 100%;
+  }
+  .room-part .room-box .person, .room-part .room-box .clothes {
+    height: 120vw;
+    top: 5vw;
+  }
+  .room-part .closed {
+    display: none;
+  }
+  .room-part .wardrobe-box {
+    height: auto;
+  }
+  .room-part .wardrobe-box .suit-box .content .content-item {
+    width: 60px;
+  }
+  .room-part .wardrobe-box .suit-box .content .content-item img {
+    width: 100%;
+  }
+  .room-part .wardrobe-box .clothes-box .content .content-item {
+    width: 60px;
+    height: 60px;
+  }
+  .room-part .wardrobe-box .clothes-box .content .content-item img {
+    height: 100%;
+  }
+  .room-part .wardrobe-box .bg-box .content .content-item {
+    width: 60px;
+    height: 60px;
+  }
+  .room-part .wardrobe-box .bg-box .content .content-item img {
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
